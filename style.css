@@ -23,6 +23,18 @@ body{
   padding-left: 20px
 }
 
+.film-text ul {
+  padding-left: 20px
+}
+
+.film-text ul li {
+  margin-bottom: 15px;
+}
+
+.images-section img{
+  margin-bottom: 300px;
+}
+
 
 .container {
   display: flex;
