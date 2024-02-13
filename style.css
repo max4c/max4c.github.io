@@ -66,5 +66,6 @@ body {
 }
 
 p.underline {
+  border-left: 1px solid #495054;
   border-bottom: 1px solid #495054;
 }
