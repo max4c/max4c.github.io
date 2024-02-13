@@ -1,31 +1,41 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Images | Max Forsey</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="container">
-  <div class="images-section">
-    <p>The paintings, architecture, and design that impact me.<br><br></p>
-    <img src="images/The Listener by James C. Christensen.jpg" alt="The Listener" width="300" height="300" >
-    <img src="images/School of Athens by Raphael.jpg" alt="The Listener" width="500" height="350" >
-    <img src="images/Never Too Small.png.webp" alt="The Listener" width="600" height="500" >
-  </div>
 
-  
-  <div class="links-section">
-    <p> max forsey</p>
-    <p><a href="index.html">about</a></p>
-    <p><a href="books.html">books</a></p>
-    <p><a href="films.html">films</a></p>
-    <p><a href="images.html">images</a></p>
-    <p><a href="music.html">music</a></p>
-    <p><a href="quotes.html">quotes</a></p>
-    <p><a href="weblog.html">weblog</a></p>
+<head>
+  <meta charset="utf-8">
+  <title>Images | Max Forsey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="images-section">
+      <p>The paintings, architecture, and design that impact me.<br><br></p>
+      <img src="images/The Listener by James C. Christensen.jpg" alt="The Listener" width="300" height="300">
+      <img src="images/School of Athens by Raphael.jpg" alt="The Listener" width="500" height="350">
+      <img src="images/Never Too Small.png.webp" alt="The Listener" width="600" height="500">
+    </div>
+
+
+    <div id="sidebar"></div>
+
+    <script>
+      loadSidebar();
+
+      function loadSidebar() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "sidebar.html", true);
+        xhr.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("sidebar").innerHTML = this.responseText;
+          }
+        };
+        xhr.send();
+      }
+    </script>
   </div>
-</div>
+  </div>
 </body>
+
 </html>

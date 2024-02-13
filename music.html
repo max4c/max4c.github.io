@@ -1,34 +1,69 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Music | Max Forsey</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>Music | Max Forsey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="container"> 
+  <div class="container">
     <div class="music-section">
-      <p>I most consistently listen to classical and indie rock. Music is one of my favorite ways to embrace culture. That includes jazz, rap, rnb, country, hyperpop, gospel, heavy metal, etc. <br><br></p>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7gz7GnLjMSKImEJBFPj8Ie?utm_source=generator" width="98%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="tsuneo imahori"></iframe>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5LCRPSIFxczfCJmpa5U6DL?utm_source=generator" width="98%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Sergio Assad and Yo-Yo Ma"></iframe>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1C1OBpwB6tRViTiWE2ZgNR?utm_source=generator" width="98%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Kendrick Lamar"></iframe>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0j4fiXOAYaQNdLb9hDfu8b?utm_source=generator" width="98%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Mac DeMarco"></iframe>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1ljtQrsf55VCwjqXjro7Po?utm_source=generator" width="98%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Pink Panthress"></iframe>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5xcYuTciYwyCDPkOgYBAYz?utm_source=generator" width="98%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Rachmaninoff"></iframe>
+      <p>I most consistently listen to classical and indie rock. Music is one of my favorite ways to embrace culture.
+        That includes jazz, rap, rnb, country, hyperpop, gospel, heavy metal, etc. <br><br></p>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/7gz7GnLjMSKImEJBFPj8Ie?utm_source=generator" width="98%" height="152"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+        title="tsuneo imahori"></iframe>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/5LCRPSIFxczfCJmpa5U6DL?utm_source=generator" width="98%" height="152"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+        title="Sergio Assad and Yo-Yo Ma"></iframe>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/1C1OBpwB6tRViTiWE2ZgNR?utm_source=generator" width="98%" height="152"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+        title="Kendrick Lamar"></iframe>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/0j4fiXOAYaQNdLb9hDfu8b?utm_source=generator" width="98%" height="152"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+        title="Mac DeMarco"></iframe>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/1ljtQrsf55VCwjqXjro7Po?utm_source=generator" width="98%" height="152"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+        title="Pink Panthress"></iframe>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/5xcYuTciYwyCDPkOgYBAYz?utm_source=generator" width="98%" height="152"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+        title="Rachmaninoff"></iframe>
       <p><br>Got recommendations?<a href="mailto:hello@maxforsey.com"> Send them my way</a>!</p>
     </div>
-  
-  <div class="links-section">
-    <p> max forsey</p>
-    <p><a href="index.html">about</a></p>
-    <p><a href="books.html">books</a></p>
-    <p><a href="films.html">films</a></p>
-    <p><a href="images.html">images</a></p>
-    <p><a href="music.html">music</a></p>
-    <p><a href="quotes.html">quotes</a></p>
-    <p><a href="weblog.html">weblog</a></p>
+
+    <div id="sidebar"></div>
+
+    <script>
+      loadSidebar();
+
+      function loadSidebar() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "sidebar.html", true);
+        xhr.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("sidebar").innerHTML = this.responseText;
+          }
+        };
+        xhr.send();
+      }
+    </script>
   </div>
-</div>
+  </div>
 </body>
+
 </html>
