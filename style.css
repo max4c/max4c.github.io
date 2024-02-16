@@ -5,14 +5,14 @@
   font-size: 15px;
 }
 
-.links-section a:link,
-.links-section a:visited {
+a:link,
+a:visited {
   color: #A3795A;
+  text-decoration: none;
 }
 
-.links-section a:hover,
-.links-section a:active {
-  text-decoration: none;
+a:hover {
+  color: #e97319;
 }
 
 body {
