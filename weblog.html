@@ -9,13 +9,27 @@
 </head>
 
 <body>
+  <div id="header"></div>
+  <script>
+    loadHeader();
+    function loadHeader() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'header.html', true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          document.getElementById('header').innerHTML = this.responseText;
+        }
+      };
+      xhr.send();
+    }
+  </script>
+
   <div class="container">
     <div class="profile-text">
       <ul>
         <li>&#x26F5;<a href="weblog/2023-12_Weblog.html">Why Choose Weblog As The Name?</a></li>
       </ul>
     </div>
-
 
     <div id="sidebar"></div>
 

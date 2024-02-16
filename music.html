@@ -9,6 +9,20 @@
 </head>
 
 <body>
+  <div id="header"></div>
+  <script>
+    loadHeader();
+    function loadHeader() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'header.html', true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          document.getElementById('header').innerHTML = this.responseText;
+        }
+      };
+      xhr.send();
+    }
+  </script>
   <div class="container">
     <div class="music-section">
       <p>I most consistently listen to classical and indie rock. Music is one of my favorite ways to embrace culture.
