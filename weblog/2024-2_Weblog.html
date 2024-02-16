@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Why Choose Weblog As The Name? | Max Forsey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-text">
+            Objectivity in Design
+        </div>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="/images/pencil.png" alt="Logo" style="width:75px; height:75px;">
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="profile-section">
+            <p>February 2024, Provo<br><br></p>
+            <div class="profile-text">
+                <p>
+                    I started building this website with various influences like
+                    <a href="https://patrickcollison.com/">Patrick Collison</a>,
+                    <a href="https://nat.org/">Nat Friedman</a>, and many
+                    other serious entrepreneurs that opt for a barebones, no nonsense approach,
+                    to their websites.
+                    <br><br>
+                </p>
+                <p>
+                    Then I read Paul Graham's essay
+                    <a href="https://paulgraham.com/taste.html">Taste for Makers</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="sidebar"></div>
+
+        <script>
+            loadSidebar();
+
+            function loadSidebar() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "../sidebar.html", true);
+                xhr.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        document.getElementById("sidebar").innerHTML = this.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        </script>
+    </div>
+</body>
+
+</html>
