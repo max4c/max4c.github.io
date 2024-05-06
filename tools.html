@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Quotes | Max Forsey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <script>
+        loadHeader();
+        function loadHeader() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'header.html', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById('header').innerHTML = this.responseText;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+    <div class="container">
+        <div class="profile-section">
+            <div class="film-text">
+                <p>
+                    I enjoy tools that are pieces of art in and of themselves. This page is inspired about Kevin
+                    Kelly's CoolTools site.
+                    Here is an ongoing list of tools that I use in my personal and professional life that spark joy.
+                    <br><br>
+                </p>
+                <h4>Developer Tools</h4>
+                <ul>
+                    <li>VS Code - it just works.</li>
+                    <li>iTerm2 - makes the terminal experience on macos smooth. </li>
+                    <li>Disk Inventory X - best way to visually manage storage on macos.</li>
+                </ul>
+                <h4>Sites</h4>
+                <ul>
+                    <li>Perplexity.ai - best answer engine out there. Also when I met Aravind, the CEO, at AI grant, he
+                        was quite nice and softspoken.</li>
+                    <li>Duckduckgo - if perplexity doesn't have it, I go here. I love being able to watch videos here
+                        instead of getting sucked into wasting time on youtube.</li>
+                    <li>AlternativeTo - anytime I need a software tool I go here.</li>
+                    <li>Packhacker - Really great site to find travel gear. </li>
+                    <li>Monkeytype - best well-designed typing practice site. </li>
+                </ul>
+                <h4>Notetaking</h4>
+                <ul>
+                    <li>Notion - My LifeOS. Also my todo list and personal project management tool.
+                        For team project management, I prefer Linear.</li>
+                    <li>Obsidian - Local notetaking that makes a beautiful writing experience. </li>
+                    <li>Pilot G-2 05 - I handwrite my journal nightly and this pen makes it so satifying.</li>
+                </ul>
+                <h4>Everyday Productivity</h4>
+                <ul>
+                    <li>Raycast - I use it ~100 times a day for so many things. It is the foundation of my
+                        efficiency on macos.</li>
+                    <li>Stats - see cpu, gpu, ram in the menu bar in real time.</li>
+                    <li>Shottr - can't copy text with your cursor? Use this to scan the text. </li>
+                    <li>Linear Mouse - increase cursor movement than highest speed on Macos. My pointer speed is 0.13,
+                        do
+                        not go to the max speed as it will be extremely hard to reset it </li>
+                    <li>Notion Calendar - Good design. I prefer when it was named Cron.</li>
+                    <li>Bitwarden - Password autofill is so satifying. Simple and it just works.</li>
+                </ul>
+                <h4>Clothing</h4>
+                <ul>
+                    <li>Ibex - Sustainable lululemon that aligns with my interest in hiking and plastic-free clothing.
+                    </li>
+                </ul>
+                <h4>Health</h4>
+                <ul>
+                    <li>Flux - turn off blue light on screens at night for better sleep.</li>
+                    <li>Earthrunners - I have used these for about 85% of all of my walking for 2.5 years. Start slow,
+                        especially if you want to run in them.</li>
+                    <li>Colemak - I never learned to touchtype until college when my wrists started to hurt a lot due to
+                        ignorance concerning propr ergonomics. I chose colemak as my keyboard layout and enjoy it so
+                        much. Instead of looking at a diagram of where letters are, I just started completely fresh on
+                        monkeytype and just looked at the screen and let muscle memory develop over time. After 2 years,
+                        I am floating around 84 wpm with 96% accuracy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="sidebar"></div>
+
+        <script>
+            loadSidebar();
+
+            function loadSidebar() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "sidebar.html", true);
+                xhr.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        document.getElementById("sidebar").innerHTML = this.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        </script>
+    </div>
+    </div>
+</body>
+
+</html>

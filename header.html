@@ -1,6 +1,6 @@
 <div id="header">
     <div class="header-text">
-        Max Forsey
+        Max Forsey <span id="page-title"></span>
     </div>
     <div class="logo">
         <a href="index.html">
@@ -8,3 +8,17 @@
         </a>
     </div>
 </div>
+
+<script>
+    // Get the current page filename
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+
+    // If the page is index.html, change it to "About"
+    if (page === "index.html") {
+        page = "About";
+    }
+
+    // Set the inner text of the page-title span
+    document.getElementById("page-title").innerText = page;
+</script>
