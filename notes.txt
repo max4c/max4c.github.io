@@ -1,18 +1,15 @@
 Future blog post ideas
 
 Metalearning
-<p>
-I significantly enjoy learning about experts and masters of any field.
-This interest has grown in part, thanks to Tim Ferriss' podcast and my high school education in the
-liberal arts.
-Three pieces of an expert's workflow are at the center of my learning, namely:
-<br><br>
-</p>
-<ul>
-<li>How they practice</li>
-<li>What their routines are</li>
-<li>What tools they use</li>
-</ul>
+    I significantly enjoy learning about experts and masters of any field.
+    This interest has grown in part, thanks to Tim Ferriss' podcast and my high school education in the
+    liberal arts.
+    Three pieces of an expert's workflow are at the center of my learning, namely:
 
+How they practice
+What their routines are
+What tools they use
 Create an experts/metalearning tab about all the experts that inspire metalearning
-- nevertoosmall, peter attia, jupiterhikes, 
+- nevertoosmall, peter attia, jupiterhikes
+
+Write a blog post on AI Grant, Ycombinator, entrepreneurship, Sameday, (processes, workflows, etc)

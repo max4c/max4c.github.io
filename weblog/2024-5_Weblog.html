@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fitness Wearables | Max Forsey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-text">
+            Fitness Wearables
+        </div>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="/images/apple_watch.png" alt="Logo" style="width:75px; height:75px;">
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="profile-section">
+            <p>May 2024, Provo<br><br></p>
+            <div class="profile-text">
+                <p>I've used the Apple Watch for one year and the Whoop for one year.</p>
+                <p>The Apple Watch can be configured to remove almost every notification, so it serves just as a
+                    sleep/fitness tracker.<br><br></p>
+                <p>The main downside, and the reason I don't use it anymore, is the constant need to remove and charge
+                    it. Approximately one day of battery life became really annoying to me, and I don't want the larger
+                    Ultra model.<br><br></p>
+                <p>The Whoop is almost perfect for me because I never have to remove it—the charger clips on—and it only
+                    needs to be charged every three to four days. I forget it's on my wrist, and I find the insights
+                    helpful. For instance, I am now sleeping nine hours instead of eight because my recovery was
+                    consistently low, and now I'm feeling much better throughout the day. The main downside is that it
+                    takes the place of a watch but has no screen to tell time. Personally, a Whoop with a small,
+                    discreet screen to display the time would be perfect. I really don't like the look of a watch and a
+                    Whoop on either arm or on both arms. Also, the subscription model is extremely hard to justify when
+                    features aren't changing fast enough for me.<br><br></p>
+                <p>My subscription renewal for Whoop is coming up soon, and I am going to cancel and see how things go
+                    without a wearable. Depending on how that goes, I'll either go back to Whoop, or try out a Garmin
+                    Forerunner or a Coros Pace 3, as I enjoy trail running.<br><br></p>
+
+            </div>
+        </div>
+
+        <div id="sidebar"></div>
+
+        <script>
+            loadSidebar();
+
+            function loadSidebar() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "../sidebar.html", true);
+                xhr.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        document.getElementById("sidebar").innerHTML = this.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        </script>
+    </div>
+</body>
+
+</html>
