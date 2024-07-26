@@ -10,19 +10,7 @@
 
 <body>
     <div id="header"></div>
-    <script>
-        loadHeader();
-        function loadHeader() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'header.html', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState === 4 && this.status === 200) {
-                    document.getElementById('header').innerHTML = this.responseText;
-                }
-            };
-            xhr.send();
-        }
-    </script>
+
     <div class="container">
         <div class="profile-section">
             <div class="film-text">
@@ -107,7 +95,7 @@
         </div>
 
         <div id="sidebar"></div>
-        <script src="sidebar-loader.js"></script>
+        <script src="page-components-loader.js"></script>
     </div>
     </div>
 </body>
