@@ -39,21 +39,7 @@
     </div>
 
     <div id="sidebar"></div>
-
-    <script>
-      loadSidebar();
-
-      function loadSidebar() {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "sidebar.html", true);
-        xhr.onreadystatechange = function () {
-          if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("sidebar").innerHTML = this.responseText;
-          }
-        };
-        xhr.send();
-      }
-    </script>
+    <script src="sidebar-loader.js"></script>
   </div>
   </div>
 </body>

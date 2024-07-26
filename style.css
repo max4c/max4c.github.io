@@ -104,13 +104,36 @@ body {
 }
 
 .sidebar {
-  flex: 1;
-  text-align: right;
-  border-bottom: 1px solid #ccc;
+    flex: 1;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
 }
 
 .sidebar a {
-  display: block;
+    display: block;
+}
+
+.toggle-interests {
+    cursor: pointer;
+    position: relative;
+    padding-left: 15px; /* Adjust as needed */
+}
+
+.toggle-icon::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.toggle-interests.open .toggle-icon::before {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.interests-content {
+    display: none;
 }
 
 .quotes-text p {
