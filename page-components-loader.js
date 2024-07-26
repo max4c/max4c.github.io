@@ -19,8 +19,7 @@ function addHoverInterests() {
 	if (toggleInterests && interestsContent) {
 		toggleInterests.addEventListener("mouseenter", function () {
 			this.classList.add("open");
-			interestsContent.style.display = "block";
-			setTimeout(() => interestsContent.classList.add("visible"), 50);
+			interestsContent.classList.add("visible");
 		});
 
 		const interestsSection = document.querySelector(".interests-section");

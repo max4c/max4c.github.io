@@ -133,17 +133,15 @@ body {
 }
 
 .interests-content {
-    display: none;
-    transition: opacity 0.7s ease;
-    opacity: 0;
-    overflow: hidden;
-    max-height: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease-out, opacity 0.7s ease-out;
 }
 
 .interests-content.visible {
     opacity: 1;
     max-height: 500px; /* Adjust this value based on your content */
-    transition: opacity 0.3s ease, max-height 0.7s ease; 
 }
 
 .quotes-text p {
