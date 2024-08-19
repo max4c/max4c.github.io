@@ -62,6 +62,5 @@ function isTouchDevice() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	loadComponent("header.html", "header");
 	loadComponent("sidebar.html", "sidebar");
 });

@@ -3,41 +3,30 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Why Choose Weblog As The Name? | Max Forsey</title>
+    <title>Objectivity in Design | Max Forsey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-    <div id="header">
-        <div class="header-text">
-            Objectivity in Design
-        </div>
-        <div class="logo">
-            <a href="../index.html">
-                <img src="/images/pencil.png" alt="Logo" style="width:75px; height:75px;">
-            </a>
-        </div>
-    </div>
-
     <div class="container">
-        <div class="profile-section">
-            <p>February 2024, Provo<br><br></p>
-            <div class="profile-text">
+        <div class="content">
+            <h2>Objectivity in Design</h2>
+            <p>February 2024, Provo</p>
                 <p>
                     I started building this website with various influences like
                     <a href="https://patrickcollison.com/">Patrick Collison</a>,
                     <a href="https://nat.org/">Nat Friedman</a>, and many
                     other serious entrepreneurs that opt for a barebones, no nonsense approach,
                     to their websites.
-                    <br><br>
+                  
                 </p>
                 <p>
                     Then I read Paul Graham's essay
                     <a href="https://paulgraham.com/taste.html">Taste for Makers</a>. I appreciated it so much
                     because based on my liberal arts background, I have made a conscious decision that all things
-                    can contain <i>verum, bonum,</i> and <i>pulchrum</i>.
-                    <br><br>
+                    can contain <i>verum, bonum,</i> and <i>pulchrum</i> (truth, goodness, and beauty).
+                  
                 </p>
                 <p>
                     There are inherent laws that exist in design based on proportion, symmetry, and form. Now, as
@@ -46,7 +35,7 @@
                     believes in objectivity, I do want to shy away from the complexity of the universe that I first
                     encountered
                     when learning about geometry.
-                    <br><br>
+                  
                 </p>
                 <p>
                     I studied Euclid in high school and it was quite satisfying to see clear, logical postulates
@@ -54,7 +43,7 @@
                     in theoretical physics and non-Euclidean geometry, that universe created in a box falls apart due to
                     question marks
                     and complexity.
-                    <br><br>
+                  
                 </p>
                 <p>
                     I compare design to geometry to acknowledge that reality is far more complex and nuanced than
@@ -62,25 +51,10 @@
                     This acceptance does not, however, negate the principles of design or mathematics but rather invites
                     the expert to dive deeper into the waters of complexity and find the pearls of truth.
                 </p>
-            </div>
         </div>
 
         <div id="sidebar"></div>
-
-        <script>
-            loadSidebar();
-
-            function loadSidebar() {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", "../sidebar.html", true);
-                xhr.onreadystatechange = function () {
-                    if (this.readyState === 4 && this.status === 200) {
-                        document.getElementById("sidebar").innerHTML = this.responseText;
-                    }
-                };
-                xhr.send();
-            }
-        </script>
+        <script src="page-components-loader.js"></script>
     </div>
 </body>
 
