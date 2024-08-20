@@ -36,6 +36,15 @@ a:hover {
   color: #e97319;
 }
 
+.sidebar a:link,
+.sidebar a:visited {
+  color: #000000;
+}
+
+.sidebar a:hover {
+  color: #e97319;
+}
+
 ul {
     padding-left: 20px;
 }

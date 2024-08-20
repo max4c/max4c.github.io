@@ -1,12 +1,10 @@
-function loadComponent(url, elementId) {
+function loadComponent(url, elementId, callback) {
 	const xhr = new XMLHttpRequest();
 	xhr.open("GET", url, true);
 	xhr.onreadystatechange = function () {
 		if (this.readyState === 4 && this.status === 200) {
 			document.getElementById(elementId).innerHTML = this.responseText;
-			if (elementId === "sidebar") {
-				addInterestsInteraction();
-			}
+			if (callback) callback();
 		}
 	};
 	xhr.send();
@@ -61,6 +59,31 @@ function isTouchDevice() {
 	);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-	loadComponent("sidebar.html", "sidebar");
-});
+function loadSidebar() {
+	const path = window.location.pathname;
+	const sidebarPath = path.includes("/writing/")
+		? "../sidebar.html"
+		: "sidebar.html";
+	const postId = document.body.getAttribute("data-post-id");
+
+	loadComponent(sidebarPath, "sidebar", () => {
+		if (postId) {
+			const logo = document.querySelector(".logo img");
+			if (logo) {
+				logo.src = `../images/${postId}-logo.png`;
+			}
+		}
+
+		// Adjust the logo link
+		const logoLink = document.querySelector(".logo a");
+		if (logoLink) {
+			logoLink.href = path.includes("/writing/")
+				? "../index.html"
+				: "index.html";
+		}
+
+		addInterestsInteraction();
+	});
+}
+
+document.addEventListener("DOMContentLoaded", loadSidebar);
