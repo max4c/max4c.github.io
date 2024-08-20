@@ -78,6 +78,32 @@ iframe {
     display: block;
 }
 
+pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: auto;
+}
+
+code {
+  display: block;
+  white-space: pre;
+}
+
+.comment {
+  color: #75715e; /* Grey for comments */
+}
+
+code::before {
+  color: #66d9ef; /* Blue for prompt */
+}
+
+.hr {
+  color: #272822;
+}
+
 .toggle-interests {
     cursor: pointer;
     position: relative;
