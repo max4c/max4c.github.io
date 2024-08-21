@@ -12,12 +12,27 @@
   margin: 0 auto;
   flex-direction: row-reverse;
   padding-top: 60px;
+  padding-left: 15px;
+  padding-right: 15px; 
 }
 
 .content {
   flex: 8;
   margin-right: 30px;
+  width: 100%;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack content vertically on mobile */
+    padding-top: 30px; /* Reduce top padding on mobile */
+  }
+
+  .content {
+    margin-right: 0; /* Remove right margin on mobile */
+  }
+}
+
 
 .content p {
     margin-bottom: 20px;
@@ -187,4 +202,27 @@ h5 {
 
 h6 {
     font-size: 1rem; /* Adjust as needed */
+}
+
+.dark-mode {
+  background-color: #273136;
+  color: #F2FFFC
+}
+
+.dark-mode a:link,
+.dark-mode a:visited {
+  color: #A3795A;
+}
+
+.dark-mode a:hover {
+  color: #e97319;
+}
+
+.dark-mode .sidebar a:link,
+.dark-mode .sidebar a:visited {
+  color: white;
+}
+
+.dark-mode .sidebar a:hover {
+  color: #e97319;
 }

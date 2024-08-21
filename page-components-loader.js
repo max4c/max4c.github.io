@@ -86,4 +86,18 @@ function loadSidebar() {
 	});
 }
 
-document.addEventListener("DOMContentLoaded", loadSidebar);
+function applyDarkMode() {
+	const currentHour = new Date().getHours();
+	const isDarkMode = currentHour < 6 || currentHour >= 18; // Dark mode between 6 PM and 6 AM
+
+	if (isDarkMode) {
+		document.body.classList.add("dark-mode");
+	} else {
+		document.body.classList.remove("dark-mode");
+	}
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+	loadSidebar();
+	applyDarkMode();
+});
