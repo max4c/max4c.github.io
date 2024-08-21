@@ -88,7 +88,7 @@ function loadSidebar() {
 
 function applyDarkMode() {
 	const currentHour = new Date().getHours();
-	const isDarkMode = currentHour < 6 || currentHour >= 18; // Dark mode between 6 PM and 6 AM
+	const isDarkMode = currentHour < 6 || currentHour >= 18; 
 
 	if (isDarkMode) {
 		document.body.classList.add("dark-mode");
