@@ -280,3 +280,24 @@ h6 {
 .dark-mode .sidebar a:hover {
   color: #e97319;
 }
+
+.content .writing-entry p {
+  margin: 0;
+}
+
+.content .writing-entry a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.content .writing-entry a:hover {
+  color: #e97319;
+}
+
+.dark-mode .content .writing-entry a {
+  color: white;
+}
+
+.dark-mode .content .writing-entry a:hover {
+  color: #e97319;
+}
