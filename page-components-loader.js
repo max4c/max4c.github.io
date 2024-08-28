@@ -101,3 +101,26 @@ document.addEventListener("DOMContentLoaded", () => {
 	loadSidebar();
 	applyDarkMode();
 });
+
+// Array of emojis representing the building process
+const buildingEmojis = ["❤️", "💪", "😭", "💻", "🚀", "✨"];
+let currentEmojiIndex = 0;
+
+function changeEmoji() {
+	const emojiElement = document.getElementById('changing-emoji');
+	if (emojiElement) {
+		currentEmojiIndex = (currentEmojiIndex + 1) % buildingEmojis.length;
+		emojiElement.textContent = buildingEmojis[currentEmojiIndex];
+	}
+}
+
+// Change emoji every second
+setInterval(changeEmoji, 2000);
+
+// Start with heart emoji
+document.addEventListener('DOMContentLoaded', () => {
+	const emojiElement = document.getElementById('changing-emoji');
+	if (emojiElement) {
+		emojiElement.textContent = '❤️';
+	}
+});
